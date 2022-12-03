@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 
 import "components/Application.scss";
 
-
 import DayList from "./DayList";
 import Appointment from "./Appointment/index.js";
+
 import axios from "axios";
 
 
