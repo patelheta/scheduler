@@ -21,6 +21,7 @@ export default function Application() {
 
 
   const schedule = dailyAppointments.map((appointment) => {
+
     const interview = getInterview(state, appointment.interview);
 
     return (
@@ -60,6 +61,10 @@ export default function Application() {
       </section>
       <section className="schedule">
         {schedule}
+        <Appointment
+          key='last'
+          time='5pm'
+        />
       </section>
     </main>
   );
