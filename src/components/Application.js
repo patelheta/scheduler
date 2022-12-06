@@ -29,6 +29,7 @@ export default function Application(props) {
       }
     });
   }
+
   function cancelInterview(id) {
     return axios.delete(`/api/appointments/${id}`).then((response) => {
 
