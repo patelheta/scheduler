@@ -7,6 +7,6 @@ describe("Navigation", () => {
     cy.visit("/");
     cy.contains("[data-testid=day]", "Tuesday")
       .click()
-      .should("have.css", "day-list__item--selected", "rgb(242, 242, 242)");
+      .should("have.class", "day-list__item--selected");
   });
 });
