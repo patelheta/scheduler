@@ -51,7 +51,7 @@ export default function Appointment(props) {
     <article className="appointment" data-testid="appointment">
       <Header time={props.time} />
       {mode === CONFIRM && <Confirm
-        message="Delete the appointment?"
+        message="Are you sure you would like to delete?"
         onConfirm={onDeleteConfirm}
         onCancel={() => back()} />}
 
