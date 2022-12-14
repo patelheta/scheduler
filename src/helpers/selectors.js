@@ -1,3 +1,9 @@
+/**
+ * return appointments for specific day
+ * @param state 
+ * @param day 
+ * @returns appointmentForDay
+ */
 export function getAppointmentsForDay(state, day) {
   const findDay = state.days.find(d => d.name === day);
   if (!findDay) {
@@ -7,6 +13,13 @@ export function getAppointmentsForDay(state, day) {
   const appointmentForDay = Object.values(state.appointments).filter((appointment) => dayAppointments.includes(appointment.id));
   return appointmentForDay;
 }
+
+/**
+ * return Interviewers for specific day
+ * @param state 
+ * @param day 
+ * @returns appointmentForDay
+ */
 
 export function getInterviewersForDay(state, day) {
   const findDay = state.days.find(d => d.name === day);
@@ -18,6 +31,12 @@ export function getInterviewersForDay(state, day) {
   return interviewersForDay;
 }
 
+/**
+ * Return new Interview object for specific appointment with interviewers details
+ * @param state 
+ * @param interview 
+ * @returns new interview object
+ */
 export function getInterview(state, interview) {
   if (!interview) return null;
   const newInterview = { ...interview, interviewer: Object.values(state.interviewers).find(intr => intr.id === interview.interviewer) };

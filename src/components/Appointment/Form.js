@@ -8,6 +8,7 @@ export default function Form(props) {
 
   const [error, setError] = useState("");
 
+  //form validation for empty inputs
   const validate = () => {
     if (student === "") {
       setError("Student name cannot be blank");
@@ -20,12 +21,12 @@ export default function Form(props) {
     setError("");
     props.onSave(student, interviewer);
   };
-
+  // reset form
   const reset = () => {
     setStudent("");
     setInterviewer(null);
   };
-
+  // cancel form
   const cancel = () => {
     reset();
     props.onCancel();
