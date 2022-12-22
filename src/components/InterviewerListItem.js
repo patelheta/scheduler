@@ -10,7 +10,7 @@ export default function InterviewerListItem(props) {
   });
 
   const profileName = (name) => {
-    if (props.selected === true) {
+    if (props.selected) {
       return name;
     }
     return;

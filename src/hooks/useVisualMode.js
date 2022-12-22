@@ -26,10 +26,11 @@ export default function useVisualMode(initial) {
   * @param  replace 
   */
   function back() {
+    const newHistory = [...history];
     if (history.length > 1) {
-      const newHistory = [...history].pop();
+      newHistory.pop();
       setHistory(newHistory);
-      setMode(history[history.length - 1]);
+      setMode(newHistory[newHistory.length - 1]);
     }
   }
 
